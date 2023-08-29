@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My map</title>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+    </head>
+
+    <body>
+<div id="mymap" style="height: 800px"></div>
+<script type="text/javascript">
+var map = L.map('mymap', {
+    center: [38.1625228, -96.9633171],
+    zoom: 5
+});
+L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png', {
+    attribution: 'Map tiles by Stamen Design, under CC BY 4.0. Data by OpenStreetMap, under ODbL.',
+    maxZoom: 10,
+    minZoom: 4
+}).addTo(map);
+</script>
+    </body>
+</html>
